@@ -3,9 +3,11 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponenet } from './app.component';
 
+//@ is decorator indicator. NgModule is name of decorator
 //decorator. Do not put semi-colon; not a statement but piece of code to be applied to class, field, or method
 @NgModule({  //takes in an object with known properties to configure the class you'd decorate as an angular module. properties known as meta data
-    imports: [
+   //imports, declarations, bootstrap are meta-data  
+  imports: [
       BrowserModule
     ],
     declarations: [

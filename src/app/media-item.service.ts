@@ -53,8 +53,12 @@ export class MediaItemService {
     }
   ];
 
-  get() {
-    return this.http.get<MediaItemsResponse>('mediaitems')
+  get(medium) {
+    const getOptions = {
+      // params: { medium: medium }
+      params: { medium } //same as line above since variable names are the same
+    };
+    return this.http.get<MediaItemsResponse>('mediaitems', getOptions)
       .pipe(
         map((response: MediaItemsResponse) => {
           return response.mediaItems;
